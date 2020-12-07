@@ -1,0 +1,21 @@
+title FSO 0.4
+
+Selain->Palvelin: HTTP POST new_note
+note over Palvelin 
+Palvelin tallettaa uuden noten
+end note
+Palvelin-->Selain: HTTP 302 redirect /notes
+Selain->Palvelin: HTTP GET /notes
+Palvelin-->Selain: HTML koodi
+Selain->Palvelin: HTTP GET main.css
+Palvelin-->Selain: main.css
+Selain->Palvelin: HTTP GET main.js 
+Palvelin-->Selain: main.js
+note over Selain
+Selain suorittaa js-koodin
+end note
+Selain->Palvelin: HTTP GET data.json
+Palvelin-->Selain: data.json
+note over Selain
+Muistiinpanot esitetään näytölle
+end note
