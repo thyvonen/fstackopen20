@@ -1,0 +1,13 @@
+title FSO06
+
+
+Actor Käyttäjä
+Käyttäjä->Selain:Noten tiedot
+note over Selain
+Noten tiedot lisätään selaimen listaan
+end note
+Selain->Palvelin:POST new_note_spa
+note over Palvelin
+Selain lisää noten tiedot omaan listaansa
+end note
+Palvelin-->Selain:message: "note created"
