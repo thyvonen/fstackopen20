@@ -2,12 +2,15 @@ title FSO05
 
 Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
 Palvelin-->Selain: HTML koodi
+note over Selain
+Selain lukee html-koodin ja pyytää siinä linkattuja resursseja
+end note
 Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
 Palvelin-->Selain: main.css
 Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
 Palvelin-->Selain: spa.js
 note over Selain
-Selain suorittaa javascriptin
+Selain suorittaa saadun javascriptin
 end note
 Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
 Palvelin-->Selain: data.json
