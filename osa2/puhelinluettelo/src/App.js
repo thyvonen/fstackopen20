@@ -31,7 +31,6 @@ const Person = ({person}) => {
   )
 }
 
-
 const App = () => {
   const [ persons, setPersons] = useState([]) 
   const [ newName, setNewName ] = useState('')
