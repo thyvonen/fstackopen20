@@ -35,7 +35,7 @@ const App = () => {
   const [ persons, setPersons] = useState([]) 
   const [ newName, setNewName ] = useState('')
   const [ newNumber, setNewNumber ] = useState('')
-  const [ filterContent, setFilterContent] = useState("")
+  const [ filterContent, setFilterContent] = useState('')
 
   useEffect(() => {
     console.log('effect')
