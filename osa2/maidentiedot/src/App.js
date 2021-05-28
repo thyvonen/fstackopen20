@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
 
-const ShowList = ({countries}) => {
+const ShowList = ({countries, setinput}) => {
   console.log({countries})
   if (countries.length > 10) {
     return (
@@ -14,14 +14,16 @@ const ShowList = ({countries}) => {
 
   if (countries.length === 1) {
     return (
+      <div>
       <CountryInfo country={countries}/>
+      </div>
     )
   }
 
   return (
     <div>
       <ul>
-      {countries.map(country => <li key={country.numericCode}> {country.name} </li>)} 
+      {countries.map(country => <li key={country.numericCode}> {country.name} <button onClick={() => setinput(country.name)}>show</button> </li>)} 
       </ul>
     </div>
   )
@@ -35,10 +37,9 @@ const CountryInfo = ({country}) => {
       <div>population: {country[0].population}</div>
       <h3>languages</h3>
       <ul>
-      {country[0].languages.map(language => <li key={language.iso239_1}>{language.name}</li>)}
+        {country[0].languages.map(language => <li key={language.iso639_1}>{language.name}</li>)}
       </ul>
-
-      <img src={country[0].flag} style={{height: 100}} alt="flag" />
+      <img src={country[0].flag} style={{height: 150, width: 200}} alt="flag" />
     </div>
   )
 }
@@ -70,9 +71,9 @@ const App = () => {
     <div>
       <div>find countries <input onChange={handleCountryInput} /></div>
      <div>
-       <ul>
-        <ShowList countries={filteredCountries}/> 
-       </ul>
+       
+        <ShowList countries={filteredCountries} setinput={setCountryInput}/> 
+       
     </div>
 
     </div>
