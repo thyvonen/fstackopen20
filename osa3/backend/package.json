@@ -1,0 +1,11 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "description": "Backend for assignment 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"ERROR: no test specified\" && exit 1"
+  },
+  "author": "Timo Hyvönen",
+  "license": "MIT"
+}
